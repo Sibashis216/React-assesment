@@ -35,16 +35,18 @@
     left: 49%;
 }
 .register-login{
-    position: relative;
-    left: 666px;
-    top: -48px;
+    position: absolute;
+    right: 14px;
+    top: 23px;
+    width: 92px;
 }
 
 /* LOGIN CSS STYLES */
 .login-register{
-    position: relative;
-    left: 666px;
-    top: -48px;
+    position: absolute;
+    right: 42px;
+    top: 23px;
+    width: 92px;
 }
 .login-page{
     position: relative;
@@ -78,8 +80,8 @@
 .booking-header {
     position: absolute;
     top: 0px;
-    left: 0px;
-    width: 1532px;
+    left: 138px;
+    width: 1398px;
     height: 70px;
     /* border: 2px solid red; */
   }
@@ -88,14 +90,14 @@
     /* border: 2px solid; */
     width: 156px;
     right: 180px;
-    top: 15px;
+    top: 20px;
   }
   .booking-logout-button{
     position: absolute;
     /* border: 2px solid; */
     width: 156px;
     right: 10px;
-    top: 15px;
+    top: 20px;
   }
   .css-ke5b6m-MuiButtonBase-root-MuiButton-root{
     height: 55px;
@@ -115,4 +117,23 @@
       width: 91%;
       position: relative;
       left: 41px;
+  }
+
+  .mybookings{
+    position: absolute;
+    top: 21px;
+    width: 82px;
+    right: 20px;
+  }
+  .myBooking-lists{
+    border: 2px solid green;
+    position: absolute;
+    top: 12%;
+    left: 32%;
+    width: 531px;
+    height: 496px;
+    text-align: initial;
+  }
+  Link{
+    text-decoration: none;
   }
