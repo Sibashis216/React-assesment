@@ -9,30 +9,40 @@ function Login() {
   const [Password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  // let userData = localStorage.getItem("Users");
+  // let data = JSON.parse(userData);
+  // let foundEmail = data.find((e) => e.Email === Email);
+  // let foundPassword = data.find((e) => e.Password === Password);
 
-  let userData = localStorage.getItem("Users");
-  let data = JSON.parse(userData);
-  let foundEmail = data.find((e) => e.Email === Email);
-  let foundPassword = data.find((e) => e.Password === Password);
-   
-
-  const loginInput=(event)=>{
+  const loginInput = (event) => {
+    let userData = localStorage.getItem("Userssssss");
+    let data = JSON.parse(userData);
+    console.log(data.Email)
+    let foundEmail = data.find((e) => {return e.Email} );
+    let foundPassword = data.find((e) => {return e.Password} );
+    console.log(foundEmail);
+    // let foundPassword = data.find((e) => e.Password === Password);
     event.preventDefault();
-    if ( Email === "" || Password === "") {
-       alert("All the fields are mandatory");
+    if (Email === "" || Password === "") {
+      alert("All the fields are mandatory");
       // toast.error("Enter Correct Email");
-    }else if(foundEmail.Email===Email || foundPassword.Password===Password){
-        alert("Login succesful");
-        // navigate("/bustickets");
-      }else{
-        alert("Please register first");
-        // navigate("/bustickets", { replace: true });
-      }
-      // let foundObject = data.find((e) => e.Email === Email),
+    } else if (foundEmail.Email === Email || foundPassword.Password === Password) {
+      console.log("email and password got it");
+      alert("Login succesful");
+      //alert("Please register first");
+      navigate("../bustickets", { replace: true });
     }
-  
+    //  else if(foundEmail.Email!==Email && foundPassword.Password!==Password){
+    else {
+    return  alert("Please register first");
+     }
+    // else{alert("Login succesful");
+    // navigate("../bustickets", { replace: true });
 
- 
+    // navigate("/bustickets", { replace: true });
+    // }
+    // let foundObject = data.find((e) => e.Email === Email),
+  };
 
   return (
     <div>
@@ -68,9 +78,9 @@ function Login() {
 
         <div className="login-button">
           {/* <Link to="/bustickets" style={{ textDecoration: "none" }}> */}
-            <Button variant="contained" color="success" onClick={loginInput}>
-              Login
-            </Button>
+          <Button variant="contained" color="success" onClick={loginInput}>
+            Login
+          </Button>
           {/* </Link> */}
         </div>
       </div>

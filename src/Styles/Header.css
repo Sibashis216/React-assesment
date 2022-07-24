@@ -105,19 +105,27 @@
   .ticket-box{
     position: absolute;
     /* border: 2px solid red; */
-    top: 141px;
+    top: 105px;
     height: 85px;
     width: 60%;
     left: 317px;
   }
-  .search-boxes{
+  .search-boxes {
     display: flex;
-      gap: 80px;
-      border: 2px solid black;
-      width: 91%;
-      position: relative;
-      left: 41px;
-  }
+    gap: 80px;
+    height: 83px;
+    border: 2px solid black;
+    width: 57%;
+    position: fixed;
+    left: 332px;
+}
+
+.from-input-box{
+  position: relative;
+  top: -1px;
+  height: 84px;
+  width: 155px;
+}
 
   .mybookings{
     position: absolute;
@@ -136,4 +144,20 @@
   }
   Link{
     text-decoration: none;
+  }
+
+  .buses{
+    position: absolute;
+    border: 2px solid red;
+    width: 94%;
+    height: 205%;
+    top: 130%;
+    left: 2%;
+    display: flex;
+  }
+  .left-side{
+    width: 25%;
+    height: 163px;
+    border: 2px solid;
+    text-align: initial;
   }

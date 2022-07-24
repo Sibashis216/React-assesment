@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Homepage from "./Homepage";
 import { ToastContainer, toast } from "react-toastify";
 
+let arr = [];
 function Register() {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [ValidEmail, setValidEmail] = useState(false);
+  const navigate = useNavigate();
 
-  const Register = () => {
+  const Register = (event) => {
     // console.log(Name, Email, Password);
+    event.preventDefault();
+    // let arr = [];
 
     if (Name === "" || Email === "" || Password === "") {
       alert("All the fields are mandatory");
@@ -21,20 +25,38 @@ function Register() {
     ) {
       alert("Invalid Email");
     } else {
+      const userArray = {
+        Name: Name,
+        Password: Password,
+        Email: Email,
+      };
+      arr.push(userArray);
       setName("");
       setEmail("");
       setPassword("");
       setValidEmail(true);
+      //  let userrrr= arr.push(Name, Email, Password);
+      // localStorage.setItem("Usersss", JSON.stringify(userrrr));
+      // console.log(userrrr);
+      // alert("Saved successfully");
+      // if (ValidEmail) {
+      // localStorage.setItem("Userssssss", JSON.stringify(arr));
+      // console.log(arr);
+      // alert("Saved successfully");
+      //  }
+      // navigate("../login", { replace: true });
+      // localStorage.setItem("Userssssss", JSON.stringify(arr));
     }
   };
 
-  const arr = [];
+  // useEffect(() => {
   if (ValidEmail) {
-    arr.push(Name, Email, Password);
-    localStorage.setItem("Users", JSON.stringify(arr));
+    localStorage.setItem("Userssssss", JSON.stringify(arr));
     console.log(arr);
     alert("Saved successfully");
+    navigate("../login", { replace: true });
   }
+  // }, [arr])
 
   return (
     <div>
