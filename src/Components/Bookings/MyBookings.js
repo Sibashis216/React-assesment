@@ -1,6 +1,8 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import '../Homepage/Homepage.css'
+import './MyBooking.css'
 
 function MyBookings() {
   const navigate = useNavigate();

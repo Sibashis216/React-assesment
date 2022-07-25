@@ -1,10 +1,10 @@
 import "./App.css";
-import Homepage from "./Components/Homepage";
-import Register from "./Components/Register";
-import Login from "./Components/Login";
+import Homepage from "./Components/Homepage/Homepage";
+import Register from "./Components/Credentials/Register";
+import Login from "./Components/Credentials/Login";
 import BusTickets from "./Components/Bookings/BusTickets";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomepageLogo from "./Components/HomepageLogo";
+import HomepageLogo from "./Components/Homepage/HomepageLogo";
 import MyBookings from "./Components/Bookings/MyBookings";
 
 function App() {

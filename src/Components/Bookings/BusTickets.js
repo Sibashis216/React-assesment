@@ -1,10 +1,12 @@
 import React from "react";
 import Bookingheader from "./Bookingheader";
 import Tickets from "./Tickets";
+import '../Homepage/Homepage.css'
+import './BusTicket.css'
 
 function BusTickets() {
   return (
-    <div>
+    <div className="gradient-tickets">
       <div className="booking-header">
         <Bookingheader />
       </div>

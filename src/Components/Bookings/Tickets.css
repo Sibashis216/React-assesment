@@ -1,0 +1,85 @@
+.left-side {
+    width: 25%;
+    background-color: whitesmoke;
+    height: 163px;
+    margin-left: 13px;
+    border: 2px solid;
+    text-align: initial;
+  }
+  .middle-side {
+    width: 25%;
+    height: 163px;
+    border: 2px solid;
+    text-align: center;
+    background-color: whitesmoke;
+
+  }
+  .right-side {
+    width: 25%;
+    height: 163px;
+    border: 2px solid;
+    text-align: initial;
+    background-color: whitesmoke;
+
+  }
+  .last-right-side {
+    width: 8%;
+    height: 163px;
+    border: 2px solid;
+    display: flex;
+    text-align: initial;
+    background-color: whitesmoke;
+    gap: 32px;
+    flex-direction: column;
+  }
+  .arrow {
+    width: 45px;
+    /* margin-left: 146px; */
+  }
+  .rating{
+    border: 2px solid green;
+    height: 58px;
+    margin-left: -1px;
+    background-color: green;
+    width: 107.5px;
+  }
+  .rating-icon {
+    width: 22px;
+    height: 51px;
+    position: relative;
+    padding-left: 52px;
+    bottom: 12px;
+    padding-top: 1px;
+    display: flex;
+    color: yellow;
+    flex-direction: row;
+  }
+  .search-boxes {
+    display: flex;
+    gap: 80px;
+    height: 83px;
+    border: 2px solid black;
+    width: 87%;
+    position: relative;
+    left: 47px;
+  }
+  .buses {
+    /* position: absolute; */
+    border: 2px solid yellow;
+    width: 149%;
+    height: 205%;
+    top: 130%;
+    display: flex;
+    margin-left: -243px;
+    gap: 60px;
+    margin-top: 36px;
+    left: -230px;
+    margin-bottom: 25px;
+  }
+  .buses{
+   display: flex;
+   /* text-align: center; */
+   justify-content: space-around;
+   /* background-color: whitesmoke; */
+   /* flex-direction: column */
+  }  

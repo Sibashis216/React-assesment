@@ -3,8 +3,24 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import "../Homepage/Homepage.css";
+import "./Login.css";
+import { Form, FormControl } from "react-bootstrap";
+import { Box, OutlinedInput } from "@mui/material";
 function Login() {
+  // function MyFormHelperText() {
+  //   const { focused } = useFormControl() || {};
+  
+  //   const helperText = React.useMemo(() => {
+  //     if (focused) {
+  //       return 'This field is being focused';
+  //     }
+  
+  //     return 'Helper text';
+  //   }, [focused]);
+  
+  //   return <FormHelperText>{helperText}</FormHelperText>;
+  // }
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -18,16 +34,16 @@ function Login() {
     event.preventDefault();
     let userData = localStorage.getItem("Userssssss");
     let data = JSON.parse(userData);
-    console.log(data.Email)
-    let foundUser = data.find((e) => e.Email===Email );
+    console.log(data.Email);
+    let foundUser = data.find((e) => e.Email === Email);
     console.log(foundUser);
     // let foundPassword = data.find((e) => e.Password === Password);
     if (Email === "" || Password === "") {
       alert("All the fields are mandatory");
       // toast.error("Enter Correct Email");
-    }else if(foundUser===undefined){
-      alert(" Not available")
-    } else if ( foundUser.Password === Password) {
+    } else if (foundUser === undefined) {
+      alert(" Not available");
+    } else if (foundUser.Password === Password) {
       console.log("email and password got it");
       alert("Login succesful");
       //alert("Please register first");
@@ -35,8 +51,8 @@ function Login() {
     }
     //  else if(foundEmail.Email!==Email && foundPassword.Password!==Password){
     else {
-    return  alert("Please register first");
-     }
+      return alert("Please register first");
+    }
     // else{alert("Login succesful");
     // navigate("../bustickets", { replace: true });
 
@@ -46,7 +62,7 @@ function Login() {
   };
 
   return (
-    <div>
+    <div id="grad1">
       <div style={{ display: "inlineFlex" }}>
         <h1>Login here</h1>
         <div className="login-register">
@@ -65,14 +81,26 @@ function Login() {
         </div>
 
         <div className="login-fill-input">
-          <input
+          {/* <input
             style={{ paddingTop: "10px", marginTop: "50px" }}
             value={Email}
             onChange={(e) => setEmail(e.target.value)}
-          />
+          /> */}
+          <Form.Control aria-label="First name" style={{border: "2px solid",paddingTop: "10px", marginTop: "50px" }}
+            value={Email}              placeholder="Enter email"
+            onChange={(e) => setEmail(e.target.value)}/> 
+
+          {/* <Box component="form" noValidate autoComplete="off"> */}
+            {/* <FormControl sx={{ width: "25ch" }}> */}
+              {/* <OutlinedInput placeholder="Please enter text" /> */}
+              {/* <MyFormHelperText /> */}
+            {/* </FormControl> */}
+          {/* </Box> */}
+
           <input
-              type="password"
-            style={{ paddingTop: "10px", marginTop: "53px" }}
+            type="password"
+            placeholder="Enter Password "
+            style={{border: "2px solid", paddingTop: "10px", marginTop: "53px" }}
             value={Password}
             onChange={(e) => setPassword(e.target.value)}
           />

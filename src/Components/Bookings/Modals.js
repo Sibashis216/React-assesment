@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import '../Homepage/Homepage.css'
+import './Modals.css'
+
 
 let busArray = [];
 const ariaLabel = { "aria-label": "description" };
@@ -99,7 +102,7 @@ function Modals(props) {
         component="h2"
         sx={{ mt: -4 }}
       >
-        Book Here
+       <div style={{fontWeight:"bold"}}> Book Here</div>
       </Typography>
       <Typography id="modal-modal-description" sx={{ mt: 2 }}>
         <Container>

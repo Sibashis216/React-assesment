@@ -1,0 +1,27 @@
+.no-of-persons{
+    display: flex;
+    flex-direction: row;
+  }
+  .inc-dec{
+    display: flex;
+    margin-left: 13px;
+    gap: 31px;
+    flex-direction: row;
+  }
+  .modal-buttons{
+    display: flex;
+      flex-direction: row;
+      position: relative;
+      width: 30px;
+      height: 73px;
+      top: 46px;
+      gap: 75px
+  }
+  .input-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: -14px;
+    /* border: 2px solid; */
+    line-height: 0.2;
+    height: 475px;
+  }

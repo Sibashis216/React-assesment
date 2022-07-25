@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import { Link, useNavigate } from "react-router-dom";
-import Homepage from "./Homepage";
+import Homepage from "../Homepage/Homepage";
 import { ToastContainer, toast } from "react-toastify";
 import { Form } from "react-bootstrap";
+import "../Homepage/Homepage.css";
+import "./Register.css";
 
 let arr = [];
 function Register() {
@@ -60,7 +62,7 @@ function Register() {
   // }, [arr])
 
   return (
-    <div>
+    <div id="#grad2" className="gradient">
       <div style={{ display: "inlineFlex" }}>
         <h1>Register here</h1>
         <div className="register-login">
@@ -81,13 +83,13 @@ function Register() {
           <div className="register-fill-input">
             <input
               placeholder="Enter Name"
-              style={{ paddingTop: "10px" }}
+              style={{border: "2px solid", paddingTop: "10px" }}
               value={Name}
               onChange={(e) => setName(e.target.value)}
             />
             <input
               placeholder="Enter email"
-              style={{ paddingTop: "10px", marginTop: "50px" }}
+              style={{border: "2px solid", paddingTop: "10px", marginTop: "50px" }}
               value={Email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -101,7 +103,7 @@ function Register() {
             <Form.Control
               className="frminput"
               type="password"
-              style={{ paddingTop: "10px", marginTop: "55px" }}
+              style={{border: "2px solid", paddingTop: "10px", marginTop: "55px" }}
               // value={password}
               // onChange={(e) => setpassword(e.target.value)}
               placeholder="Enter Password "

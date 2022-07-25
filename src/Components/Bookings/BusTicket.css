@@ -1,0 +1,22 @@
+.booking-header {
+    position: absolute;
+    top: 0px;
+    left: 138px;
+    width: 1398px;
+    height: 70px;
+    /* border: 2px solid red; */
+  }
+  .ticket-box {
+    position: absolute;
+    /* border: 2px solid red; */
+    top: 105px;
+    height: 85px;
+    width: 60%;
+    left: 317px;
+  }
+  .gradient-tickets{
+    height: 744px;
+    margin-top: -23px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, #956060, #ff0044);
+  } 

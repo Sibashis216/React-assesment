@@ -7,6 +7,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { AiFillStar } from "react-icons/ai";
 import { Container } from "react-bootstrap";
+import '../Homepage/Homepage.css'
+import './Tickets.css'
 import { Form } from "react-bootstrap";
 import Modals from "./Modals";
 // import Arrow from '../Components/right-arrow-icon-ico-11562931718i8rqgsef9d.png'
@@ -402,6 +404,7 @@ function Tickets() {
           className="from-input-box"
           aria-label="Default select example"
           onChange={selectFrom}
+          style={{border: "2px solid"}}
         >
           <option className="none">FROM</option>
           <option value="Hyderabad">Hyderabad</option>
@@ -417,6 +420,7 @@ function Tickets() {
           className="from-input-box"
           aria-label="Default select example"
           onChange={selectTo}
+          style={{border: "2px solid"}}
         >
           <option className="none">TO</option>
           <option value="Hyderabad">Hyderabad</option>
