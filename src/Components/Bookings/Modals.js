@@ -36,6 +36,10 @@ function Modals(props) {
   const [gender, setgender] = useState("");
   const [date, setdate] = useState("");
 
+  const closeModal = () => {
+    navigate("/bustickets", { replace: true });
+  };
+
   const bookHandler = (e) => {
     e.preventDefault();
     console.log(props);
@@ -80,13 +84,12 @@ function Modals(props) {
       // setage("");
       // setgender("");
       // // setdate("");
-       setTimeout(() => {
-         props.close();
-       }, 1500);
+      setTimeout(() => {
+        props.close();
+      }, 1500);
     }
 
     navigate("../bustickets", { replace: true });
-
   };
   return (
     <div>
@@ -103,15 +106,22 @@ function Modals(props) {
           <div className="no-of-persons">
             <h4>Number of Persons:</h4>
             <div className="inc-dec">
-              <button 
-                style={{ marginTop: "7px", width: "46px", height: "72px" }}onClick={decrement}
+              <button
+                style={{ marginTop: "7px", width: "46px", height: "72px" }}
+                onClick={decrement}
               >
                 <h1>-</h1>
               </button>
-              <div value={ticketval}
-                  onChange={(e) => setticketval(e.target.value)} style={{ marginTop: "32px" }}>{ticketval}</div>
+              <div
+                value={ticketval}
+                onChange={(e) => setticketval(e.target.value)}
+                style={{ marginTop: "32px" }}
+              >
+                {ticketval}
+              </div>
               <button
-                style={{ marginTop: "7px", width: "46px", height: "72px" }}onClick={increment}
+                style={{ marginTop: "7px", width: "46px", height: "72px" }}
+                onClick={increment}
               >
                 <h1>+</h1>
               </button>
@@ -119,36 +129,55 @@ function Modals(props) {
           </div>
           <div className="input-details">
             <h4>Name</h4>
-            <Input placeholder="Enter Name"
-            className="modalinput"
-            type="text"
-            value={names}
-            onChange={(e) => setnames(e.target.value)}
-            required inputProps={ariaLabel} />
+            <Input
+              placeholder="Enter Name"
+              className="modalinput"
+              type="text"
+              value={names}
+              onChange={(e) => setnames(e.target.value)}
+              required
+              inputProps={ariaLabel}
+            />
             <h4>Email:</h4>
-            <Input placeholder="Enter Email"className="modalinput"
-                type="email"
-                value={email}
-                onChange={(e) => setemail(e.target.value)}
-                required inputProps={ariaLabel} />
+            <Input
+              placeholder="Enter Email"
+              className="modalinput"
+              type="email"
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
+              required
+              inputProps={ariaLabel}
+            />
             <h4>Phone Number:</h4>
-            <Input placeholder="Enter Number"className="modalinput"
-                type="number"
-                value={number}
-                onChange={(e) => setnumber(e.target.value)}
-                required inputProps={ariaLabel} />
+            <Input
+              placeholder="Enter Number"
+              className="modalinput"
+              type="number"
+              value={number}
+              onChange={(e) => setnumber(e.target.value)}
+              required
+              inputProps={ariaLabel}
+            />
             <h4>Age:</h4>
-            <Input placeholder="Enter Age"className="modalinput"
-                type="number"
-                value={age}
-                onChange={(e) => setage(e.target.value)}
-                required inputProps={ariaLabel} />
+            <Input
+              placeholder="Enter Age"
+              className="modalinput"
+              type="number"
+              value={age}
+              onChange={(e) => setage(e.target.value)}
+              required
+              inputProps={ariaLabel}
+            />
             <h4>Gender: </h4>
-            <Input placeholder="Enter Gender"  className="modalinput"
-                type="text"
-                value={gender}
-                onChange={(e) => setgender(e.target.value)}
-                required inputProps={ariaLabel} />
+            <Input
+              placeholder="Enter Gender"
+              className="modalinput"
+              type="text"
+              value={gender}
+              onChange={(e) => setgender(e.target.value)}
+              required
+              inputProps={ariaLabel}
+            />
             <h4>Date of Journey:</h4>
             <Input
               placeholder="Placeholder"
@@ -163,22 +192,23 @@ function Modals(props) {
           <div className="modal-buttons">
             <div>
               <Link to="/bustickets" style={{ textDecoration: "none" }}>
-              <Button
-                style={{
-                  width: "132px",
-                  height: "45px",
-                  backgroundColor: "green",
-                }} onClick={bookHandler}
-                variant="contained"
-                color="success"
-              >
-                Book Now
-              </Button>
+                <Button
+                  style={{
+                    width: "132px",
+                    height: "45px",
+                    backgroundColor: "green",
+                  }}
+                  onClick={bookHandler}
+                  variant="contained"
+                  color="success"
+                >
+                  Book Now
+                </Button>
               </Link>
             </div>
             <div>
-            <Link to="/bustickets" style={{ textDecoration: "none" }}>
               <Button
+                 onClick={handleClose}
                 style={{
                   width: "132px",
                   height: "45px",
@@ -187,10 +217,10 @@ function Modals(props) {
                 variant="contained"
                 color="success"
               >
+                <Link to="/bustickets" style={{ textDecoration: "none" }}>
                 Close
+                </Link>
               </Button>
-              </Link>
-
             </div>
           </div>
         </Container>

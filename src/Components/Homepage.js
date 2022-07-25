@@ -10,12 +10,12 @@ function Homepage() {
     <div>
       <img className="backgrnd-img" src={BackgroundImage} />
       <div className="header-Css">
-        <Link to="/login">
+        <Link to="/login" style={{ textDecoration: "none" }}>
           <Button variant="contained" color="success">
             Login
           </Button>
         </Link>
-        <Link to="/register">
+        <Link to="/register" style={{ textDecoration: "none" }}>
           <Button variant="contained">Register</Button>
         </Link>
       </div>

@@ -99,7 +99,8 @@
   top: 20px;
 }
 .css-ke5b6m-MuiButtonBase-root-MuiButton-root {
-  height: 55px;
+  padding: 9px;
+    height: 39px;
 }
 .ticket-box {
   position: absolute;
@@ -134,11 +135,12 @@
 }
 .myBooking-lists {
   border: 2px solid green;
-  position: absolute;
+  /* position: absolute; */
   top: 12%;
   left: 32%;
   width: 531px;
   height: 496px;
+  margin-left: 487px;
   /* text-align: initial; */
 }
 Link {
@@ -146,14 +148,17 @@ Link {
 }
 
 .buses {
-  position: absolute;
+  /* position: absolute; */
   border: 2px solid red;
   width: 149%;
   height: 205%;
   top: 130%;
   display: flex;
+  margin-left: -243px;
   gap: 60px;
+  margin-top: 36px;
   left: -230px;
+  margin-bottom: 25px;
 }
 .buses{
  display: flex;

@@ -19,14 +19,15 @@ function Login() {
     let userData = localStorage.getItem("Userssssss");
     let data = JSON.parse(userData);
     console.log(data.Email)
-    let foundEmail = data.filter((e) => {return e.Email} );
-    let foundPassword = data.filter((e) => {return e.Password} );
-    console.log(foundEmail);
+    let foundUser = data.find((e) => e.Email===Email );
+    console.log(foundUser);
     // let foundPassword = data.find((e) => e.Password === Password);
     if (Email === "" || Password === "") {
       alert("All the fields are mandatory");
       // toast.error("Enter Correct Email");
-    } else if (foundEmail.Email === Email || foundPassword.Password === Password) {
+    }else if(foundUser===undefined){
+      alert(" Not available")
+    } else if ( foundUser.Password === Password) {
       console.log("email and password got it");
       alert("Login succesful");
       //alert("Please register first");

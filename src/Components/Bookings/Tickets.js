@@ -25,7 +25,7 @@ const style = {
 };
 
 function Tickets() {
-  const [passwordInput, setpasswordInput] = useState("");
+  const [toInput, setToInput] = useState("");
   const [fromInput, setfromInput] = useState("");
   const [foundbuses, setfoundbuses] = useState();
   const [busNumber, setbusNumber] = useState();
@@ -42,7 +42,7 @@ function Tickets() {
 
   const busArray = [
     {
-      Service_Number: 778545,
+      BusNo: 778545,
       pick: "Hyderabad",
       drop: "Visakhapatnam",
       picktime: "6:50 AM",
@@ -52,7 +52,7 @@ function Tickets() {
       seats: 11,
     },
     {
-      Service_Number: 549863,
+      BusNo: 549863,
       pick: "Hyderabad",
       drop: "Visakhapatnam",
       picktime: "4:00 PM",
@@ -62,7 +62,7 @@ function Tickets() {
       seats: 22,
     },
     {
-      Service_Number: 112665,
+      BusNo: 112665,
       pick: "Visakhapatnam",
       drop: "Hyderabad",
       picktime: "12:00 PM",
@@ -72,8 +72,8 @@ function Tickets() {
       seats: 3,
     },
     {
-      Service_Number: 521785,
-      pick: "Vijayawada",
+      BusNo: 521785,
+      pick: "Indore",
       drop: "Hyderabad",
       picktime: "6:00 AM",
       droptime: "1:00 PM",
@@ -82,7 +82,7 @@ function Tickets() {
       seats: 23,
     },
     {
-      Service_Number: 521165,
+      BusNo: 521165,
       pick: "Mumbai",
       drop: "Hyderabad",
       picktime: "6:00 AM",
@@ -92,7 +92,7 @@ function Tickets() {
       seats: 13,
     },
     {
-      Service_Number: 521154,
+      BusNo: 521154,
       pick: "Mumbai",
       drop: "Hyderabad",
       picktime: "5:30 AM",
@@ -103,9 +103,9 @@ function Tickets() {
     },
 
     {
-      Service_Number: 521641,
+      BusNo: 521641,
       pick: "Visakhapatnam",
-      drop: "Vijayawada",
+      drop: "Indore",
       picktime: "6:00 AM",
       droptime: "1:00 PM",
       price: 587,
@@ -113,9 +113,9 @@ function Tickets() {
       seats: 22,
     },
     {
-      Service_Number: 521852,
+      BusNo: 521852,
       pick: "Visakhapatnam",
-      drop: "Vijayawada",
+      drop: "Indore",
       picktime: "4:00 AM",
       droptime: "12:45 PM",
       price: 587,
@@ -123,8 +123,8 @@ function Tickets() {
       seats: 23,
     },
     {
-      Service_Number: 521852,
-      pick: "Vijayawada",
+      BusNo: 521852,
+      pick: "Indore",
       drop: "Visakhapatnam",
       picktime: "4:00 AM",
       droptime: "12:45 PM",
@@ -133,8 +133,8 @@ function Tickets() {
       seats: 23,
     },
     {
-      Service_Number: 521852,
-      pick: "Vijayawada",
+      BusNo: 521852,
+      pick: "Indore",
       drop: "Bangalore",
       picktime: "4:00 AM",
       droptime: "12:45 PM",
@@ -143,9 +143,9 @@ function Tickets() {
       seats: 23,
     },
     {
-      Service_Number: 521852,
+      BusNo: 521852,
       pick: "Mumbai",
-      drop: "Vijayawada",
+      drop: "Indore",
       picktime: "4:00 AM",
       droptime: "12:45 PM",
       price: 585,
@@ -153,8 +153,8 @@ function Tickets() {
       seats: 20,
     },
     {
-      Service_Number: 521852,
-      pick: "Vijayawada",
+      BusNo: 521852,
+      pick: "Indore",
       drop: "Mumbai",
       picktime: "4:00 AM",
       droptime: "12:45 PM",
@@ -163,9 +163,9 @@ function Tickets() {
       seats: 20,
     },
     {
-      Service_Number: 521852,
+      BusNo: 521852,
       pick: "Bangalore",
-      drop: "Vijayawada",
+      drop: "Indore",
       picktime: "4:00 AM",
       droptime: "12:45 PM",
       price: 585,
@@ -173,9 +173,9 @@ function Tickets() {
       seats: 20,
     },
     {
-      Service_Number: 521852,
+      BusNo: 521852,
       pick: "Hyderabad",
-      drop: "Vijayawada",
+      drop: "Indore",
       picktime: "4:00 AM",
       droptime: "12:45 PM",
       price: 585,
@@ -183,7 +183,7 @@ function Tickets() {
       seats: 20,
     },
     {
-      Service_Number: 521741,
+      BusNo: 521741,
       pick: "Bangalore",
       drop: "Hyderabad",
       picktime: "4:50 AM",
@@ -193,7 +193,7 @@ function Tickets() {
       seats: 13,
     },
     {
-      Service_Number: 521567,
+      BusNo: 521567,
       pick: "Bangalore",
       drop: "Hyderabad",
       picktime: "4:50 AM",
@@ -203,7 +203,7 @@ function Tickets() {
       seats: 15,
     },
     {
-      Service_Number: 425125,
+      BusNo: 425125,
       pick: "Hyderabad",
       drop: "Bangalore",
       picktime: "12:00 Pm",
@@ -213,7 +213,7 @@ function Tickets() {
       seats: 5,
     },
     {
-      Service_Number: 423658,
+      BusNo: 423658,
       pick: "Bangalore",
       drop: "Visakhapatnam",
       picktime: "6:00 PM",
@@ -223,7 +223,7 @@ function Tickets() {
       seats: 23,
     },
     {
-      Service_Number: 646464,
+      BusNo: 646464,
       pick: "Bangalore",
       drop: "Visakhapatnam",
       picktime: "9:00 PM",
@@ -233,7 +233,7 @@ function Tickets() {
       seats: 22,
     },
     {
-      Service_Number: 131651,
+      BusNo: 131651,
       pick: "Visakhapatnam",
       drop: "Bangalore",
       picktime: "3:00 AM",
@@ -243,7 +243,7 @@ function Tickets() {
       seats: 15,
     },
     {
-      Service_Number: 346589,
+      BusNo: 346589,
       pick: "Visakhapatnam",
       drop: "Bangalore",
       picktime: "6:00 AM",
@@ -253,7 +253,7 @@ function Tickets() {
       seats: 14,
     },
     {
-      Service_Number: 412593,
+      BusNo: 412593,
       pick: "Hyderabad",
       drop: "Mumbai",
       picktime: "3:00 AM",
@@ -263,7 +263,17 @@ function Tickets() {
       seats: 11,
     },
     {
-      Service_Number: 412593,
+      BusNo: 987675,
+      pick: "Bhubaneshwar",
+      drop: "Hyderabad",
+      picktime: "7:00 AM",
+      droptime: "12:30 PM",
+      price: 684,
+      rating: 4.5,
+      seats: 18,
+    },
+    {
+      BusNo: 412593,
       pick: "Visakhapatnam",
       drop: "Mumbai",
       picktime: "3:00 AM",
@@ -273,7 +283,17 @@ function Tickets() {
       seats: 11,
     },
     {
-      Service_Number: 369851,
+      BusNo: 783264,
+      pick: "Bhubaneshwar",
+      drop: "Visakhapatnam",
+      picktime: "6:00 AM",
+      droptime: "12:30 PM",
+      price: 399,
+      rating: 5.5,
+      seats: 20,
+    },
+    {
+      BusNo: 369851,
       pick: "Mumbai",
       drop: "Bangalore",
       picktime: "2:00 AM",
@@ -283,7 +303,7 @@ function Tickets() {
       seats: 8,
     },
     {
-      Service_Number: 369851,
+      BusNo: 369851,
       pick: "Bangalore",
       drop: "Mumbai",
       picktime: "2:00 AM",
@@ -293,7 +313,37 @@ function Tickets() {
       seats: 8,
     },
     {
-      Service_Number: 3675778,
+      BusNo: 5676876,
+      pick: "Bhubaneshwar",
+      drop: "Bangalore",
+      picktime: "9:00 PM",
+      droptime: "1:00 Am",
+      price: 958,
+      rating: 4.4,
+      seats: 8,
+    },
+    {
+      BusNo: 369851,
+      pick: "Bhubaneshwar",
+      drop: "Mumbai",
+      picktime: "2:00 AM",
+      droptime: "1:00 Am",
+      price: 958,
+      rating: 4.4,
+      seats: 8,
+    },
+    {
+      BusNo: 87567657,
+      pick: "Bhubaneshwar",
+      drop: "Indore",
+      picktime: "8:00 AM",
+      droptime: "5:00 Am",
+      price: 766,
+      rating: 4.4,
+      seats: 15,
+    },
+    {
+      BusNo: 3675778,
       pick: "Mumbai",
       drop: "Bangalore",
       picktime: "3:00 AM",
@@ -303,7 +353,7 @@ function Tickets() {
       seats: 18,
     },
     {
-      Service_Number: 369851,
+      BusNo: 369851,
       pick: "Mumbai",
       drop: "Visakhapatnam",
       picktime: "2:30 AM",
@@ -321,7 +371,7 @@ function Tickets() {
   // console.log(dataBus);
 
   const selectTo = (e) => {
-    setpasswordInput(e.target.value);
+    setToInput(e.target.value);
   };
   const selectFrom = (e) => {
     setfromInput(e.target.value);
@@ -331,7 +381,7 @@ function Tickets() {
     event.preventDefault();
 
     const foundbuses = dataBus.filter(
-      (e) => e.pick === fromInput && e.drop === passwordInput
+      (e) => e.pick === fromInput && e.drop === toInput
     );
     console.log(foundbuses);
     // if(foundbuses==undefined){
@@ -356,9 +406,10 @@ function Tickets() {
           <option className="none">FROM</option>
           <option value="Hyderabad">Hyderabad</option>
           <option value="Visakhapatnam">Visakhapatnam</option>
+          <option value="Bhubaneshwar">Bhubaneshwar</option>
           <option value="Bangalore">Bangalore</option>
           <option value="Mumbai">Mumbai</option>
-          <option value="Vijayawada">Vijayawada</option>
+          <option value="Indore">Indore</option>
         </Form.Select>
         <h2>TO</h2>
         {/* <Input placeholder="Placeholder" inputProps={ariaLabel} /> */}
@@ -370,11 +421,12 @@ function Tickets() {
           <option className="none">TO</option>
           <option value="Hyderabad">Hyderabad</option>
           <option value="Visakhapatnam">Visakhapatnam</option>
+          <option value="Bhubaneshwar">Bhubaneshwar</option>
           <option value="Bangalore">Bangalore</option>
           <option value="Mumbai">Mumbai</option>
-          <option value="Vijayawada">Vijayawada</option>
+          <option value="Indore">Indore</option>
         </Form.Select>
-        <div style={{ top: "12px", position: "relative" }}>
+        <div style={{ top: "12px", position: "relative" ,right: "26px"}}>
           <Button variant="contained" color="success" onClick={searchHandler}>
             Search
           </Button>
@@ -385,9 +437,9 @@ function Tickets() {
         {foundbuses ? (
           foundbuses !== undefined &&
           foundbuses.map((event) => (
-            <Container key={event.Service_Number} className="buses">
+            <Container key={event.BusNo} className="buses">
               <div className="left-side">
-                <h2>Bus Number:{event.Service_Number}</h2>
+                <h2>Bus Number:{event.BusNo}</h2>
                 <h2>Pick Location:{event.pick}</h2>
                 <h2>Pick-Up:{event.picktime}</h2>
               </div>
@@ -425,7 +477,7 @@ function Tickets() {
                     handleOpen();
                     setopenModal(true);
                     setbusNumber({
-                      sno: event.Service_Number,
+                      sno: event.BusNo,
                       pname: event.pick,
                       dname: event.drop,
                       pprice: event.price,
