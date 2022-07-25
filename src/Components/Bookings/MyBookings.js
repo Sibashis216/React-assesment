@@ -24,7 +24,7 @@ function MyBookings() {
   //   return BookedBusses
   // }
   return (
-    <div>
+    <div className="gradient">
       <h1>My Bookings</h1>
       <div className="mybookings">
         <Link to="/bustickets" style={{ textDecoration: "none" }}>
