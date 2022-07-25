@@ -15,14 +15,14 @@ function Login() {
   // let foundPassword = data.find((e) => e.Password === Password);
 
   const loginInput = (event) => {
+    event.preventDefault();
     let userData = localStorage.getItem("Userssssss");
     let data = JSON.parse(userData);
     console.log(data.Email)
-    let foundEmail = data.find((e) => {return e.Email} );
-    let foundPassword = data.find((e) => {return e.Password} );
+    let foundEmail = data.filter((e) => {return e.Email} );
+    let foundPassword = data.filter((e) => {return e.Password} );
     console.log(foundEmail);
     // let foundPassword = data.find((e) => e.Password === Password);
-    event.preventDefault();
     if (Email === "" || Password === "") {
       alert("All the fields are mandatory");
       // toast.error("Enter Correct Email");
@@ -70,6 +70,7 @@ function Login() {
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
+              type="password"
             style={{ paddingTop: "10px", marginTop: "53px" }}
             value={Password}
             onChange={(e) => setPassword(e.target.value)}

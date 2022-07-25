@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import { Link, useNavigate } from "react-router-dom";
 import Homepage from "./Homepage";
 import { ToastContainer, toast } from "react-toastify";
+import { Form } from "react-bootstrap";
 
 let arr = [];
 function Register() {
@@ -90,9 +91,20 @@ function Register() {
               value={Email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <input
+            {/* <input
               placeholder="Enter Password"
               style={{ paddingTop: "10px", marginTop: "55px" }}
+              value={Password}
+              onChange={(e) => setPassword(e.target.value)}
+            /> */}
+
+            <Form.Control
+              className="frminput"
+              type="password"
+              style={{ paddingTop: "10px", marginTop: "55px" }}
+              // value={password}
+              // onChange={(e) => setpassword(e.target.value)}
+              placeholder="Enter Password "
               value={Password}
               onChange={(e) => setPassword(e.target.value)}
             />
