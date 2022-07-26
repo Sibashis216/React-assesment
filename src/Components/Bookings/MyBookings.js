@@ -9,10 +9,8 @@ function MyBookings() {
   const booked = localStorage.getItem("Booked-Person");
   const BookedBusses = JSON.parse(booked);
 
-  const alluser=localStorage.getItem("Userssssss")
-  const users=JSON.parse(alluser) 
-  console.log(users)
-  const singleuser= users.find((e)=>e.Email)
+  const alluser=localStorage.getItem("currentUser")
+  const singleuser= JSON.parse(alluser) 
   console.log(singleuser)
   const foundPerson= BookedBusses.filter((e)=>e.Email===singleuser)
   console.log(foundPerson.Email)

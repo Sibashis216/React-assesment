@@ -6,8 +6,18 @@ import BusTickets from "./Components/Bookings/BusTickets";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomepageLogo from "./Components/Homepage/HomepageLogo";
 import MyBookings from "./Components/Bookings/MyBookings";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [loggedIn,setLoggedIn]=useState(false)
+  const user=JSON.parse(localStorage.getItem('currentUser'))
+  useEffect(() => {
+    console.log(user)
+    if (user){
+      setLoggedIn(true)
+    }
+  }, [user])
+
   return (
     <div className="App">
       {/* <Homepage/> */}
@@ -19,11 +29,14 @@ function App() {
       <BrowserRouter>
         <HomepageLogo />
         <Routes>
-          <Route path="/" element={<Homepage />} />
           <Route path="/register" exact element={<Register />} />
           <Route path="/login" exact element={<Login />} />
+          <Route path="/" exact element={<Homepage />} />
+          {/* {loggedIn&& */}
           <Route path="/bustickets" exact element={<BusTickets />} />
-          <Route path="/mybookings" exact element={<MyBookings />} />
+          {/* } */}
+          {loggedIn&&<Route path="/mybookings" exact element={<MyBookings />} />}
+          <Route path='*' element={<Homepage/>}/>
         </Routes>
       </BrowserRouter>
     </div>

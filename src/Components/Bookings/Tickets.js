@@ -441,6 +441,7 @@ function Tickets() {
         {foundbuses ? (
           foundbuses !== undefined &&
           foundbuses.map((event) => (
+            // {(event.pick==="FROM")?<h1>BUS NOT AVAILABLE</h1>:
             <Container key={event.BusNo} className="buses">
               <div className="left-side">
                 <h2>Bus Number:{event.BusNo}</h2>
@@ -492,6 +493,7 @@ function Tickets() {
                 </Button>
               </div>
             </Container>
+            // }
           ))
         ) : (
           <h1>WELCOME TO BUS TRAVELS</h1>

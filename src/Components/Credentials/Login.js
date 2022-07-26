@@ -42,12 +42,16 @@ function Login() {
       alert("All the fields are mandatory");
       // toast.error("Enter Correct Email");
     } else if (foundUser === undefined) {
-      alert(" Not available");
+      alert(" User not found");
     } else if (foundUser.Password === Password) {
       console.log("email and password got it");
+      
+      const currentUser=JSON.stringify({Name:foundUser.Name,Email:foundUser.Email})
+      console.log(currentUser)
+      localStorage.setItem('currentUser',currentUser)
       alert("Login succesful");
       //alert("Please register first");
-      navigate("../bustickets", { replace: true });
+      navigate("/bustickets", { replace: true });
     }
     //  else if(foundEmail.Email!==Email && foundPassword.Password!==Password){
     else {

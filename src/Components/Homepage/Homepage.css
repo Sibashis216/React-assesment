@@ -37,13 +37,13 @@
   background-color: #356595;
 }
 .gradient{
-  height: 723px;
+  height: 200%;
   margin-top: -23px;
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(to bottom right, #956060, #ff0044);
 }
 #grad1 {
-  height: 723px;
+  height: 100%;
   margin-top: -23px;
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(to bottom right, #956060, #ff0044);

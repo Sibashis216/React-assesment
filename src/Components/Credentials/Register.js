@@ -38,6 +38,10 @@ function Register() {
       setEmail("");
       setPassword("");
       setValidEmail(true);
+      localStorage.setItem("Userssssss", JSON.stringify(arr));
+      alert("Saved successfully");
+      console.log(arr);
+      navigate("../login", { replace: true });
       //  let userrrr= arr.push(Name, Email, Password);
       // localStorage.setItem("Usersss", JSON.stringify(userrrr));
       // console.log(userrrr);
@@ -53,16 +57,16 @@ function Register() {
   };
 
   // useEffect(() => {
-  if (ValidEmail) {
-    localStorage.setItem("Userssssss", JSON.stringify(arr));
-    console.log(arr);
-    alert("Saved successfully");
-    navigate("../login", { replace: true });
-  }
+  // if (ValidEmail) {
+  //   localStorage.setItem("Userssssss", JSON.stringify(arr));
+  //   console.log(arr);
+  //   alert("Saved successfully");
+  //   navigate("../login", { replace: true });
+  // }
   // }, [arr])
 
   return (
-    <div id="#grad2" className="gradient">
+    <div id="#grad2" className="gradient-register">
       <div style={{ display: "inlineFlex" }}>
         <h1>Register here</h1>
         <div className="register-login">
