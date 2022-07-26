@@ -5,7 +5,11 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import '../Homepage/Homepage.css'
 import './Modals.css'
-
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 let busArray = [];
 const ariaLabel = { "aria-label": "description" };
@@ -94,6 +98,11 @@ function Modals(props) {
 
     navigate("../bustickets", { replace: true });
   };
+  const [genderrr, setGenderr] = React.useState('');
+
+  const handleChange = (event) => {
+    setGenderr(event.target.value);
+  };
   return (
     <div>
       <Typography
@@ -162,7 +171,7 @@ function Modals(props) {
               inputProps={ariaLabel}
             />
             <h4>Age:</h4>
-            <Input
+             <Input
               placeholder="Enter Age"
               className="modalinput"
               type="number"
@@ -170,9 +179,10 @@ function Modals(props) {
               onChange={(e) => setage(e.target.value)}
               required
               inputProps={ariaLabel}
-            />
+            /> 
+          
             <h4>Gender: </h4>
-            <Input
+            {/* <Input
               placeholder="Enter Gender"
               className="modalinput"
               type="text"
@@ -180,7 +190,23 @@ function Modals(props) {
               onChange={(e) => setgender(e.target.value)}
               required
               inputProps={ariaLabel}
-            />
+            /> */}
+              <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={genderrr}
+          label="Gender"
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Male</MenuItem>
+          <MenuItem value={20}>Female</MenuItem>
+          <MenuItem value={30}>Others</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
             <h4>Date of Journey:</h4>
             <Input
               placeholder="Placeholder"
