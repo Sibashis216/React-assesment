@@ -7,8 +7,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { AiFillStar } from "react-icons/ai";
 import { Container } from "react-bootstrap";
-import '../Homepage/Homepage.css'
-import './Tickets.css'
+import "../Homepage/Homepage.css";
+import "./Tickets.css";
 import { Form } from "react-bootstrap";
 import Modals from "./Modals";
 // import Arrow from '../Components/right-arrow-icon-ico-11562931718i8rqgsef9d.png'
@@ -381,17 +381,27 @@ function Tickets() {
 
   const searchHandler = (event) => {
     event.preventDefault();
+    if(!fromInput || !toInput){
+      alert('fill the form')
+    }
+    else if (fromInput === toInput) {
+      alert("Source and destination can not be same ");
+    }
+     else {
+      const foundbuses = dataBus.filter(
+        (e) => e.pick === fromInput && e.drop === toInput
+      );
+      console.log(foundbuses);
+      // if(foundbuses==undefined){
+      // setnotFound(true)
+      // }else{
 
-    const foundbuses = dataBus.filter(
-      (e) => e.pick === fromInput && e.drop === toInput
-    );
-    console.log(foundbuses);
-    // if(foundbuses==undefined){
-    // setnotFound(true)
-    // }else{
-    setfoundbuses(foundbuses);
-    // }
-    // // {foundbuses.pick===fromInput?setfoundbuses(foundbuses):setnotFound(true)}
+      // const fromToEqual= foundbuses.find((e)=>e.pick)
+
+      setfoundbuses(foundbuses);
+      // }
+      // // {foundbuses.pick===fromInput?setfoundbuses(foundbuses):setnotFound(true)}
+    }
   };
   // console.log(foundbuses);
 
@@ -404,9 +414,11 @@ function Tickets() {
           className="from-input-box"
           aria-label="Default select example"
           onChange={selectFrom}
-          style={{border: "2px solid"}}
+          style={{ border: "2px solid" }}
         >
-          <option className="none">FROM</option>
+          <option className="none" style={{ display: "none" }}>
+            FROM
+          </option>
           <option value="Hyderabad">Hyderabad</option>
           <option value="Visakhapatnam">Visakhapatnam</option>
           <option value="Bhubaneshwar">Bhubaneshwar</option>
@@ -420,9 +432,11 @@ function Tickets() {
           className="from-input-box"
           aria-label="Default select example"
           onChange={selectTo}
-          style={{border: "2px solid"}}
+          style={{ border: "2px solid" }}
         >
-          <option className="none">TO</option>
+          <option className="none" style={{ display: "none" }}>
+            TO
+          </option>
           <option value="Hyderabad">Hyderabad</option>
           <option value="Visakhapatnam">Visakhapatnam</option>
           <option value="Bhubaneshwar">Bhubaneshwar</option>
@@ -430,7 +444,7 @@ function Tickets() {
           <option value="Mumbai">Mumbai</option>
           <option value="Indore">Indore</option>
         </Form.Select>
-        <div style={{ top: "12px", position: "relative" ,right: "26px"}}>
+        <div style={{ top: "12px", position: "relative", right: "26px" }}>
           <Button variant="contained" color="success" onClick={searchHandler}>
             Search
           </Button>
@@ -438,10 +452,11 @@ function Tickets() {
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
         {/* {foundbuses !== undefined && */}
+
         {foundbuses ? (
-          foundbuses !== undefined &&
           foundbuses.map((event) => (
             // {(event.pick==="FROM")?<h1>BUS NOT AVAILABLE</h1>:
+
             <Container key={event.BusNo} className="buses">
               <div className="left-side">
                 <h2>Bus Number:{event.BusNo}</h2>
@@ -493,14 +508,14 @@ function Tickets() {
                 </Button>
               </div>
             </Container>
-            // }
           ))
         ) : (
-          <h1>WELCOME TO BUS TRAVELS</h1>
+          <h1>welcome to bus travels</h1>
         )}
+        {/* {
+        foundbuses.length===0&& <h1>NO BUSES FOUND</h1>
+       } */}
       </div>
-
-      {notFound ? <div> Buses not available</div> : <div></div>}
 
       {openModal && (
         <Modal
