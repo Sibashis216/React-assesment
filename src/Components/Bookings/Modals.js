@@ -197,9 +197,11 @@ function Modals(props) {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={genderrr}
+          // value={genderrr}
           label="Gender"
-          onChange={handleChange}
+          value={gender}
+              onChange={(e) => setgender(e.target.value)}
+          // onChange={(e) => setGenderr(e.target.value)}
         >
           <MenuItem value={10}>Male</MenuItem>
           <MenuItem value={20}>Female</MenuItem>
