@@ -42,6 +42,7 @@
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(to bottom right, #956060, #ff0044);
 }
+
 #grad1 {
   height: 100vh;
   margin-top: -23px;
